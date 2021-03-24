@@ -23,9 +23,7 @@ def submit():
     req = request.get_json()
     board = req.get("board")
     boardElement.vinculateBoard(board)
-    
-    print(req)
-    
+        
     return "submit recieved"
 
 #essa requisição é feita pelo frontend a fim de coletar informações sobre o elemento a ser adicionado ao sudoku
