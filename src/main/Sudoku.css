@@ -1,0 +1,24 @@
+.board{
+    height:540px;
+    width: 540px;
+    display: grid;
+    grid-template-columns: repeat(3,179px);
+    grid-template-rows: repeat(3,179px);
+}
+
+.button{
+    justify-content: center;
+    height: 30px;
+}
+
+.controlButtons{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.button:active{
+    background-color:grey;
+}

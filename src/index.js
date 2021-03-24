@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Sudoku from './main/Sudoku';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div>
+    <h1 className="title">Sudoku</h1>
+    <Sudoku />
+  </div>,
   document.getElementById('root')
 );
 
