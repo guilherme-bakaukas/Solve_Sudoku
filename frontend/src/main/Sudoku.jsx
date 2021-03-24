@@ -3,6 +3,7 @@ import Boxes from '../components/Boxes'
 import './Sudoku.css'
 import axios from 'axios'
 const urlBase = 'http://localhost:3000'
+//url base do site
 
 
 var matriz = []
