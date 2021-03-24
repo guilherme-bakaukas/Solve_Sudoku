@@ -6,6 +6,7 @@ O usuário deve colocar o tabuleiro inicial do sudoku, através dos campos de te
 ## Execução do programa
 - Frontend:
 essa aplicação é gerenciada pelo Node, portanto basta entrar na pasta frontend e executar o comando "npm start" para rodar a aplicação.
+Organização é fundamentada em componentes e manipulação de estados em React, para garantir as alterações automáticas da página.
 A formatação do frontend está indicada abaixo, e os valores em verde são os inseridos pelo usuário. 
 
 <p align="center">
@@ -14,14 +15,15 @@ A formatação do frontend está indicada abaixo, e os valores em verde são os 
 
 - Backend:
 com o python instalado, basta executar o comando python index.py para executar o backend da nossa aplicação.
-A fim de visualizar os acontecimentos desse ambiente, o console mostra informações sobre o tabuleiro, a jogada e os dados do elemento a ser adicionado.
+Basicamente, essa parte do sistema é responsável por analisar as possibilidades do tabuleiro e retornar as alterações sugeridas. Cada posição do tabuleiro é representada por um elemento da classe Elemento, assim, a partir de suas propriedades, são feitas as verificações do sudoku.
+Além disso, para permitir a visualização dos acontecimentos desse ambiente, o console mostra informações sobre o tabuleiro, a jogada e os dados do elemento a ser adicionado.
 Dessa maneira:
 
 <p align="center">
 <img src="https://github.com/guilherme-bakaukas/Solve_Sudoku/blob/master/img_README/promptBackend.PNG" />
 </p>
 
-Definimos a porta como localhost:3000 para a comunicação e utilizamos as ferramentas Axios(javascript) e Flask(python) para realizar as requisições necessárias.
+- Observações: definimos a porta como localhost:3000 para a comunicação e utilizamos as ferramentas Axios(javascript) e Flask(python) para realizar as requisições necessárias.
 Abaixo, há uma introdução as possibiliades de uso da aplicação em react
 
 # Getting Started with Create React App
