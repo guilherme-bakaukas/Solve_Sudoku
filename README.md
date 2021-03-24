@@ -1,3 +1,18 @@
+# Solve Sudoku
+
+O objetivo do projeto é praticar os conceitos de web. O sistema é dividido em frontend e backend, programados em javascript com uso de React e python respectivamente.
+O usuário deve colocar o tabuleiro inicial do sudoku, através dos campos de texto e clickar em submmit para submeter os dados iniciais. Assim, o backend irá receber e processar essas informações. A partir desse momento, quando clickar no botão next, o frontend irá requisitar a informação da próxima jogada do sudoku, alterando seu valor no tabuleiro automaticamente. Vale a pena ressaltar que o programa ainda não está inteiramente finalizado e não engloba todas as situações de jogo. Para niveis mais elevados de dificuldade, o programa pode não encontrar uma jogada e irá apresentar um alert para indicar ao usuário. Fique tranquilo! O projeto ainda será incrementado e essas possibilidades de jogo serão analisadas e vinculadas ao algoritmo do jogo...
+
+## Execução do programa
+- Frontend
+Essa aplicação é gerenciada pelo Node, portanto basta entrar na pasta frontend e executar o comando npm start para rodar a aplicação.
+
+- Backend
+Com o python instalado, basta executar o comando python index.py para executar o backend da nossa aplicação
+
+Definimos a porta como localhost:3000 para a comunicação e utilizamos as ferramentas Axios(javascript) e Flask(python) para realizar as requisições necessárias.
+Abaixo, há uma introdução as possibiliades de uso da aplicação em react
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
