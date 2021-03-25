@@ -62,13 +62,13 @@ export default class Sudoku extends Component{
         else if (data.line < 6){box = 3}
         else if (data.line < 9){box = 6}
 
-        if (data.collum < 3){box += 0}
-        else if (data.collum < 6){box += 1}
-        else if (data.collum < 9){box +=2}
+        if (data.column < 3){box += 0}
+        else if (data.column < 6){box += 1}
+        else if (data.column < 9){box +=2}
 
-        const collum = data.collum%3
+        const column = data.column%3
         const line = data.line%3
-        boxElement = (line*3) + collum
+        boxElement = (line*3) + column
 
         board[box][boxElement] = newElement
 

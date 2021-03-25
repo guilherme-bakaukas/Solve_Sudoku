@@ -5,7 +5,7 @@ class Board:
     def __init__(self):
 #esses valores indicam a posição e valor do número a ser adicionado, inicialmente setados dessa maneira
 
-        self.infoElement = {"newDigit": 0, "line": 0, "collum": 0}
+        self.infoElement = {"newDigit": 0, "line": 0, "column": 0}
 
         self.matriz = []
 
@@ -80,12 +80,11 @@ class Board:
                     #primeiramente analisamos as possibilidades diretas, se houver apenas 1, já adicionamos na self.matriz
                     maybe=self.matriz[linha][coluna].possibilidades(self.matriz)
                     if (len(maybe)==1):
-                        print("analise direta")
                         self.matriz[linha][coluna].num=maybe[0]
                         self.matriz[linha][coluna].alterado = True
                         self.infoElement["newDigit"] = maybe[0]
                         self.infoElement["line"] = linha
-                        self.infoElement["collum"] = coluna
+                        self.infoElement["column"] = coluna
                         print("linha: ", linha+1)
                         print("coluna: ",coluna+1)
                         print("número: ",maybe[0])
@@ -99,7 +98,7 @@ class Board:
                             self.matriz[linha][coluna].alterado = True
                             self.infoElement["newDigit"] = elemento
                             self.infoElement["line"] = linha
-                            self.infoElement["collum"] = coluna
+                            self.infoElement["column"] = coluna
                             print("linha: ",linha+1)
                             print("coluna: ", coluna+1)
                             print("número: ",elemento)
@@ -113,7 +112,7 @@ class Board:
                                 self.matriz[linha][coluna].alterado = True
                                 self.infoElement["newDigit"] = elemento
                                 self.infoElement["line"] = linha
-                                self.infoElement["collum"] = coluna        
+                                self.infoElement["column"] = coluna        
                                 print("linha: ",linha+1)
                                 print("coluna: ", coluna+1)
                                 print("número: ", elemento)
@@ -127,7 +126,7 @@ class Board:
                                     self.matriz[linha][coluna].alterado = True
                                     self.infoElement["newDigit"] = elemento
                                     self.infoElement["line"] = linha
-                                    self.infoElement["collum"] = coluna
+                                    self.infoElement["column"] = coluna
                                     print("linha: ",linha+1)
                                     print("coluna: ", coluna+1)
                                     print("número: ", elemento)
@@ -145,7 +144,7 @@ class Board:
             if (var==True):
                 self.infoElement["newDigit"] = digit
                 self.infoElement["line"] = elementLinha
-                self.infoElement["collum"] = elementColuna
+                self.infoElement["column"] = elementColuna
                 changed = True
                 return changed
 
@@ -156,7 +155,7 @@ class Board:
                     
                     self.infoElement["newDigit"] = digit
                     self.infoElement["line"] = elementLinha
-                    self.infoElement["collum"] = elementColuna
+                    self.infoElement["column"] = elementColuna
                     changed = True
                     return changed
         
@@ -165,7 +164,7 @@ class Board:
             if (var==True):
                 self.infoElement["newDigit"] = digit
                 self.infoElement["line"] = elementLinha
-                self.infoElement["collum"] = elementColuna
+                self.infoElement["column"] = elementColuna
                 changed = True
                 return changed
         
@@ -198,7 +197,7 @@ class Board:
             if (self.matriz!=None):
                 self.print_tabuleiro()
                 self.atualizar()
-                print(self.infoElement)
+                print("Elemento retornado: ", self.infoElement)
                 return self.infoElement
         return None
 
